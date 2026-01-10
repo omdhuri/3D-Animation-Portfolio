@@ -35,13 +35,12 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section className="relative z-20 bg-gradient-to-b from-[#121212] to-[#0a0a0a] py-32 px-6 md:px-12">
+        <section id="work" className="relative z-20 bg-gradient-to-b from-[#121212] to-[#0a0a0a] py-32 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                     className="mb-20 text-center"
                 >
@@ -49,7 +48,7 @@ export default function Projects() {
                         Selected Work
                     </h2>
                     <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                        A collection of projects that push the boundaries of web technology and design.
+                        A collection of projects showcasing my passion for creating immersive digital experiences.
                     </p>
                 </motion.div>
 
@@ -143,6 +142,6 @@ export default function Projects() {
                     </button>
                 </motion.div>
             </div>
-        </section>
+        </section >
     );
 }

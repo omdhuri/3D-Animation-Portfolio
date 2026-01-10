@@ -17,6 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-[#121212] text-white antialiased overflow-x-hidden selection:bg-purple-500/30`}>
+        {/* Skip to content link for keyboard navigation */}
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

@@ -2,14 +2,14 @@
 
 import ScrollyCanvas from '@/components/ScrollyCanvas';
 import Overlay from '@/components/Overlay';
-import Navbar from '@/components/Navbar';
 import Projects from '@/components/Projects';
+import { Header } from '@/components/ui/header';
 
 export default function Home() {
   return (
-    <main className="relative bg-black min-h-screen">
-      {/* Navbar */}
-      <Navbar />
+    <main id="main-content" className="relative bg-black min-h-screen" aria-label="Portfolio content">
+      {/* New Shadcn-style Navbar */}
+      <Header />
 
       {/* Fixed canvas background - stays in place */}
       <ScrollyCanvas />
@@ -19,7 +19,7 @@ export default function Home() {
         <Overlay />
 
         {/* Spacer for scroll animation - 300vh */}
-        <div className="h-[300vh]" />
+        <div className="h-[300vh]" aria-hidden="true" />
 
         {/* Projects section */}
         <Projects />
