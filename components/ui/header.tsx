@@ -11,12 +11,20 @@ export function Header() {
 
     const links = [
         {
+            label: 'About',
+            href: '#about',
+        },
+        {
+            label: 'Skills',
+            href: '#skills',
+        },
+        {
             label: 'Work',
             href: '#work',
         },
         {
-            label: 'About',
-            href: '#about',
+            label: 'Resume',
+            href: '#resume',
         },
         {
             label: 'Contact',

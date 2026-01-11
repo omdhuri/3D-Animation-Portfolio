@@ -113,13 +113,9 @@ export default function Overlay() {
                 </div>
             )}
 
-            {/* About Section - Hidden anchor */}
-            <div id="about" className="absolute" style={{ top: '400vh' }} />
+            {/* Third Text (55-80%) - Clean & Simple */}
 
-            {/* Contact Section - Hidden anchor */}
-            <div id="contact" className="absolute" style={{ top: '500vh' }} />
-
-            {/* Scroll Indicator - Subtle & Refined */}
+            {/* Scroll Indicator - Premium Enhanced */}
             {scrollProgress < 0.05 && (
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -131,12 +127,32 @@ export default function Overlay() {
                         transition: 'opacity 0.3s ease'
                     }}
                 >
-                    <div className="flex flex-col items-center text-white/50">
+                    {/* Radial Glow - Subtle Purple/Blue with Pulse */}
+                    <motion.div
+                        className="absolute inset-0 -inset-x-20 -inset-y-16"
+                        animate={{
+                            opacity: [0.4, 0.7, 0.4],
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                        style={{
+                            background: 'radial-gradient(ellipse 200px 120px at center, rgba(168, 85, 247, 0.12), rgba(139, 92, 246, 0.08) 40%, transparent 70%)',
+                            filter: 'blur(30px)',
+                            pointerEvents: 'none'
+                        }}
+                    />
+
+                    {/* Content */}
+                    <div className="flex flex-col items-center text-white/50 relative z-10">
                         <span className="text-[9px] sm:text-[10px] font-medium tracking-[0.15em] sm:tracking-[0.2em] uppercase mb-1.5 sm:mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                             Scroll to explore
                         </span>
                         <div className="relative">
-                            <div className="absolute inset-0 bg-purple-500/10 blur-lg rounded-full" />
+                            {/* Icon glow - enhanced */}
+                            <div className="absolute inset-0 bg-purple-500/15 blur-2xl rounded-full" />
                             <svg className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce relative" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                             </svg>
